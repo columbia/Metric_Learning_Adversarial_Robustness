@@ -1,5 +1,8 @@
 # Metric Learning for Adversarial Robustness
 
+This is the code for NeurIPS 2019 paper
+http://www.cs.columbia.edu/~mcz/publication/TLA_Neurips_Camera_Ready.pdf
+
 ## Requirement
 Install tensorflow:    
 
