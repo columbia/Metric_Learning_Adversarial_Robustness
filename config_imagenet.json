@@ -1,0 +1,90 @@
+{
+  "_comment": "===== MODEL CONFIGURATION =====",
+  "model_dir": "/mnt/md0/FSRobust/ImageNet-rebuttal/debug",
+  "model_dir_other": "../backup/imagenet/Res50-sgd-fine",
+
+  "model_load_dir": "/mnt/md0/FSRobust/ImageNet-rebuttal/Res50/res50_manhattan/Res50-ATNone__0",
+  "model_load_dir_other": "/home/ubuntu/backup/imagenet/Res50-ATNone__0",
+
+  "tiny_imagenet_data_dir_np": "../imagenet_data",
+
+  "_comment": "===== DATASET CONFIGURATION =====",
+  "data_path": "../imagenet_data",
+
+  "_comment": "===== TRAINING CONFIGURATION =====",
+  "tf_random_seed": 221760322,
+  "np_random_seed": 226105422,
+  "max_num_training_steps": 80000,
+  "num_output_steps": 200,
+  "num_summary_steps": 500,
+  "num_checkpoint_steps": 500,
+
+  "training_batch_size": 20,
+  "optimizer": "SGD",
+
+  "step_size_schedule": [[0, 0.1], [50000, 0.01], [60000, 0.001]],
+  "step_size_schedule_adam": [[0, 0.001], [450000, 0.0001], [550000, 0.00001]],
+  "step_size_schedule_finetune": [[0, 1e-4],[2001, 1e-4],[30000, 1e-4], [60000, 1e-5]],
+
+  "weight_decay": 0.0002,
+  "momentum": 0.9,
+  "label_smoothing": 0.1,
+
+  "warming_up": 3,
+  "fixbn": false,
+
+  "lambda_adv_composite": 0.7,
+  "finetuning": false,
+  "triplet_loss_type": "cos",
+
+  "triplet_loss_margin_JSdiv": 5,
+  "triplet_loss_margin_l2": 1,
+  "gen_loss_type": "n4_add_xent",
+  "regularize_lambda": 1e-3,
+
+  "switch_a_n": false,
+
+  "nat_noise_level": 8,
+  "train_flag_adv_only": true,
+  "nat_lam": 1,
+  "architecture": "_",
+
+  "matchLayerNum": 1,
+  "lamda_triplet": 0.5,
+
+  "Use_A_Ap_B": true,
+  "Use_A1_Ap_B": true,
+  "A1_Ap_B_num": 1,
+  "Use_B_Bp_A": false,
+  "triplet_loss_layers": ["x4"],
+  "margin_list": [0.02],
+  "margin_mul": 30,
+  "match_l2": 0.5,
+  "mul_num": 1,
+  "reuse_embedding": false,
+
+  "attack_suc_ratio": 0.1,
+  "max_multi": 1,
+  "mask_effective_attack": false,
+  "mask_ratio": 0.1,
+  "model_type": "Res50",
+  "precision_level": 32,
+  "num_train_examples":100000,
+
+  "_comment": "===== EVAL CONFIGURATION =====",
+  "num_eval_examples": 10000,
+  "eval_batch_size": 50,
+  "eval_on_cpu": false,
+
+  "_comment": "=====ADVERSARIAL EXAMPLES CONFIGURATION=====",
+  "epsilon": 8,
+  "num_steps": 7,
+  "step_size": 2,
+  "random_start": true,
+  "loss_func": "xent",
+
+  "attack_momentum": 0,
+  "use_momentum": false,
+
+  "strong_attack": [10, 2]
+}
