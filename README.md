@@ -34,7 +34,7 @@ Then run:
 python train_update_fast_triplet.py
 ```
 
-To reproduce the ATL algorithm
+To reproduce the TLA algorithm
 
 
 For baseline models:
