@@ -3,6 +3,18 @@
 This is the code for NeurIPS 2019 paper
 http://www.cs.columbia.edu/~mcz/publication/TLA_Neurips_Camera_Ready.pdf
 
+Cite:
+@incollection{NIPS2019_8339,
+title = {Metric Learning for Adversarial Robustness},
+author = {Mao, Chengzhi and Zhong, Ziyuan and Yang, Junfeng and Vondrick, Carl and Ray, Baishakhi},
+booktitle = {Advances in Neural Information Processing Systems 32},
+editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+pages = {478--489},
+year = {2019},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/8339-metric-learning-for-adversarial-robustness.pdf}
+}
+
 ## Requirement
 Install tensorflow:    
 
