@@ -2,7 +2,7 @@
 
 
 Cite:
-@incollection{NIPS2019_8339,
+@incollection{Mao2019MetricRobust,
 title = {Metric Learning for Adversarial Robustness},
 author = {Mao, Chengzhi and Zhong, Ziyuan and Yang, Junfeng and Vondrick, Carl and Ray, Baishakhi},
 booktitle = {Advances in Neural Information Processing Systems 32},
