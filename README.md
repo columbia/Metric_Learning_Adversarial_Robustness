@@ -1,5 +1,17 @@
 # Metric Learning for Adversarial Robustness
 
+
+If you find this work is useful, please cite the following:
+```
+@inproceedings{Mao2019MetricRobust,
+title = {Metric Learning for Adversarial Robustness},
+author = {Mao, Chengzhi and Zhong, Ziyuan and Yang, Junfeng and Vondrick, Carl and Ray, Baishakhi},
+booktitle = {Advances in Neural Information Processing Systems 32},
+pages = {478--489},
+year = {2019},
+}
+```
+
 ## Requirement
 Install tensorflow:    
 
@@ -31,7 +43,7 @@ Then run:
 python train_update_fast_triplet.py
 ```
 
-To reproduce the ATL algorithm
+To reproduce the TLA algorithm
 
 
 For baseline models:
@@ -90,8 +102,6 @@ Then run `python eval.py` to evaluate the saved model under the given attack.
 ## Tiny ImageNet
 
 ### Prepare Tiny ImageNet dataset
-
-Switch to python2.7 version of tensorflow (source activate tensorflow_p27 on EC2 server).
 
 Download dataset: https://tiny-imagenet.herokuapp.com to subfolder imagenet_data
 
