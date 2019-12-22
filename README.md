@@ -103,8 +103,6 @@ Then run `python eval.py` to evaluate the saved model under the given attack.
 
 ### Prepare Tiny ImageNet dataset
 
-Switch to python2.7 version of tensorflow (source activate tensorflow_p27 on EC2 server).
-
 Download dataset: https://tiny-imagenet.herokuapp.com to subfolder imagenet_data
 
 run 
