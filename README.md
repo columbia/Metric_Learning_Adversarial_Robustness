@@ -147,5 +147,9 @@ Tips: AAP and A1Ap both can give a bit higher performance
 For cifar10, when using small models, the negative dictionary size need to decrease such that
 the selected negative is not too hard for the metric learning loss.
 
+### Model Weights Download
 
+CIFAR-10: www.cs.columbia.edu/~mcz/publication/upload-cifar-models.zip
+
+Tiny-ImageNet: http://www.cs.columbia.edu/~mcz/publication/TLA-tiny-imagenet.zip
 
