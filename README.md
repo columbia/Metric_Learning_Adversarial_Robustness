@@ -57,7 +57,7 @@ Note that this TLA algorithm takes almost the same time as Madry's baseline to c
 
 ### Evaluations
 
-First, set the path to the directory where the MNIST model is saved. Set up the attack type, the 
+First, set the path to the directory where the MNIST model is saved. Set up the attack type, the
 steps, the step size, and random start.
 
 Then run `python eval.py` to evaluate the model under certain attack
@@ -67,7 +67,7 @@ Then run `python eval.py` to evaluate the model under certain attack
 
 
 ### Prepare CIFAR-10 dataset
-Download the data from https://github.com/MadryLab/cifar10_challenge/tree/master/cifar10_data into the 
+Download the data from https://github.com/MadryLab/cifar10_challenge/tree/master/cifar10_data into the
 folder cifar10_data
 
 ### Running experiemnts
@@ -91,10 +91,16 @@ python train_at_madry.py --dataset cifar10
 ```
 
 
+### t-SNE
+Change the parameters inside the file (especially "mode" and "model_folder_dir") to reproduce results for Figure 1 and
+Figure 2, respectively.
+```
+python tSNE.py
+```
 
 ### Evaluations
 
-First update the path to the saved CIFAR10 model. Set up the attack type, the 
+First update the path to the saved CIFAR10 model. Set up the attack type, the
 steps, the step size, and random start.
 
 Then run `python eval.py` to evaluate the saved model under the given attack.
@@ -105,10 +111,10 @@ Then run `python eval.py` to evaluate the saved model under the given attack.
 
 Download dataset: https://tiny-imagenet.herokuapp.com to subfolder imagenet_data
 
-run 
+run
 ```
 python utils_folder/save_imagenet.py
-``` 
+```
 to produce preprocessed dataset.
 
 ### Running experiemnts
@@ -119,14 +125,14 @@ We have Res20 and Res50 architecture option.
 
 set up the config_imagenet.json
 
-first run 
+first run
 ```
 python train_at_madry.py --dataset imagenet
 ```
 
 
-Then set up the finetuning model path in config_imagenet.json, and 
-run 
+Then set up the finetuning model path in config_imagenet.json, and
+run
 ```
 python train_update_fast_triplet.py --dataset imagenet --diff_neg
 ```
@@ -134,7 +140,7 @@ python train_update_fast_triplet.py --dataset imagenet --diff_neg
 
 ### Evaluations
 
-First update the path to the saved ImageNet model. Set up the attack type, the 
+First update the path to the saved ImageNet model. Set up the attack type, the
 steps, the step size, and random start.
 
 Then run `python eval.py` to evaluate the saved model under the given attack.
@@ -152,4 +158,3 @@ the selected negative is not too hard for the metric learning loss.
 CIFAR-10: www.cs.columbia.edu/~mcz/publication/upload-cifar-models.zip
 
 Tiny-ImageNet: http://www.cs.columbia.edu/~mcz/publication/TLA-tiny-imagenet.zip
-
