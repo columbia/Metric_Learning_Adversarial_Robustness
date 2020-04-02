@@ -93,7 +93,7 @@ num_output_steps = config['num_output_steps']
 num_summary_steps = config['num_summary_steps']
 num_checkpoint_steps = config['num_checkpoint_steps']
 step_size_schedule = config['step_size_schedule']
-step_size_schedule_adam_img_v2 = config['step_size_schedule_adam']
+# step_size_schedule_adam_img_v2 = config['step_size_schedule_adam']
 step_size_schedule_finetune = config['step_size_schedule_finetune']
 
 # Adv_classifier_step_size_schedule = config['Adv_classifier_step_size_schedule']
@@ -190,10 +190,6 @@ elif dataset_type == 'imagenet':
     elif config['model_type'] == 'Res50':
         from learning.model_imagenet_res50 import ModelImagenet
         model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing=label_smoothing)
-    elif config['model_type'] == 'Res50_v2s':
-        from learning.model_imagenet_res50_v2s import ModelImagenet
-        model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing=label_smoothing)
-        step_size_schedule = step_size_schedule_adam_img_v2 # We set as the previous version
     else:
         raise ('error')
 
