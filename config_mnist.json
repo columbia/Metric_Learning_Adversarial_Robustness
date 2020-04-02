@@ -54,7 +54,8 @@
   "triplet_loss_layers": ["x4"],
   "margin_list": [0.05],
   "match_l2": 0,
-  "mul_num": 1,
+  "margin_mul": 1,
+
   "reuse_embedding": false,
 
   "attack_suc_ratio": 0.1,
