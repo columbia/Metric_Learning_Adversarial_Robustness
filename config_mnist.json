@@ -11,7 +11,7 @@
   "_comment": "===== TRAINING CONFIGURATION =====",
   "tf_random_seed": 221760322,
   "np_random_seed": 226105422,
-  "max_num_training_steps": 60000,
+  "max_num_training_steps": 600000,
   "num_output_steps": 200,
   "num_summary_steps": 500,
   "num_checkpoint_steps": 2000,
@@ -55,7 +55,7 @@
   "margin_list": [0.05],
   "match_l2": 0,
   "margin_mul": 1,
-
+  "mul_num": 1,
   "reuse_embedding": false,
 
   "attack_suc_ratio": 0.1,
