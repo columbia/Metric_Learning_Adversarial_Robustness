@@ -190,18 +190,9 @@ if dataset_type == 'cifar10':
     raw_dataset = dataloader.cifar10_input.CIFAR10Data(data_path)
     raw_dataset2 = dataloader.cifar10_input.CIFAR10Data(data_path)
     cla_raw_cifar = dataloader.cifar10_input.SepClaCIFAR10(data_path)
-    if config['model_type'] == 'Res20':
-        from learning.model_cifar10_resnet import CifarResNet
-        model = CifarResNet(precision=precision, ratio=config['mask_ratio'])
-    elif config['model_type'] == 'Res50':
+    if config['model_type'] == 'Res50':
         from learning.model_cifar10_resnet import CifarResNet
         model = CifarResNet(precision=precision, ratio=config['mask_ratio'], mode='50')
-    elif config['model_type'] == 'Res101':
-        from learning.model_cifar10_res101 import CifarResNetUpdate
-        model = CifarResNetUpdate(precision=precision, ratio=config['mask_ratio'], mode='101')
-    elif config['model_type'] == 'ConvNet':
-        from learning.convnet_cifar import CifarConvNet
-        model = CifarConvNet(precision=precision, ratio=config['mask_ratio'], lip_const=args.use_lipschitz)
     else:
         model = ModelVani(precision=precision, ratio=config['mask_ratio'], label_smoothing=label_smoothing)
     cast_to_int = True
@@ -229,14 +220,8 @@ elif dataset_type == 'imagenet':
     cla_raw_cifar = dataloader.mnist_input.MNISTDataClassed(data_path, dataset=dataset_type)
     # model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing = label_smoothing)
     cast_to_int = True
-    if config['model_type'] == 'Res20':
-        from learning.model_imagenet_res20 import ModelImagenet
-        model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing=label_smoothing)
-    elif config['model_type'] == 'Res50':
-        from learning.model_imagenet_res50 import ModelImagenet
-        model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing=label_smoothing)
-    else:
-        raise('error')
+    from learning.model_imagenet_res50 import ModelImagenet
+    model = ModelImagenet(batch_size=batch_size, precision=precision, label_smoothing=label_smoothing)
 
 global_step = tf.train.get_or_create_global_step()
 
